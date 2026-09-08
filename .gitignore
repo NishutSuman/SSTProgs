@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.vite/
+*.log
+.DS_Store
+
+# Secrets - NEVER commit
+.env
+server/*.json
+service-account.json
+*.pem
+
+# local artifacts
+screenshot.png
+shot-*.png
+src/data/prev-reds.json

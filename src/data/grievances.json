@@ -1,0 +1,134 @@
+[
+  {
+    "studentId": "L008",
+    "classNo": "5",
+    "subject": "ProbStats",
+    "comment": "Back-to-back sessions are making it hard to revise previous concepts."
+  },
+  {
+    "studentId": "L179",
+    "classNo": "5",
+    "subject": "ProbStats",
+    "comment": "The class was rescheduled without prior notice, affecting my prep plan."
+  },
+  {
+    "studentId": "L146",
+    "classNo": "1",
+    "subject": "ProbStats",
+    "comment": "Unable to join due to internet outage; want to discuss makeup options."
+  },
+  {
+    "studentId": "L113",
+    "classNo": "4",
+    "subject": "ProbStats",
+    "comment": "No recording available for reference"
+  },
+  {
+    "studentId": "L202",
+    "classNo": "4",
+    "subject": "DSA",
+    "comment": "There is a consistent clash between this class and Extracurricular events"
+  },
+  {
+    "studentId": "L248",
+    "classNo": "6",
+    "subject": "DSA",
+    "comment": "I was present but it's not reflected in the portal."
+  },
+  {
+    "studentId": "L086",
+    "classNo": "3",
+    "subject": "DSA",
+    "comment": "Missed the class due to a clash; requesting access to the recording."
+  },
+  {
+    "studentId": "L162",
+    "classNo": "2",
+    "subject": "DSA",
+    "comment": "Timetable update wasn't communicated clearly; missed the session."
+  },
+  {
+    "studentId": "L159",
+    "classNo": "2",
+    "subject": "DSA",
+    "comment": "Would appreciate clearer communication about class reschedules."
+  },
+  {
+    "studentId": "L117",
+    "classNo": "2",
+    "subject": "ProbStats",
+    "comment": "I had marked attendance but it's not reflected in the portal."
+  },
+  {
+    "studentId": "L121",
+    "classNo": "3",
+    "subject": "ProbStats",
+    "comment": "Technical issues prevented me from joining; marking as absent feels unfair."
+  },
+  {
+    "studentId": "L090",
+    "classNo": "6",
+    "subject": "DSA",
+    "comment": "Grades haven’t been updated even though assignments were submitted on time."
+  },
+  {
+    "studentId": "L221",
+    "classNo": "1",
+    "subject": "Eng",
+    "comment": "Received grade feels too low; would like a re-evaluation."
+  },
+  {
+    "studentId": "L192",
+    "classNo": "2",
+    "subject": "ProbStats",
+    "comment": "Grades haven’t been updated. My grade was supposed to be upgraded as confirmed by the instructor"
+  },
+  {
+    "studentId": "L256",
+    "classNo": "3",
+    "subject": "DSA",
+    "comment": "There is a consistent clash between this class and another scheduled session."
+  },
+  {
+    "studentId": "L065",
+    "classNo": "3",
+    "subject": "ProbStats",
+    "comment": "Attended but was not acknowledged in session; needs verification."
+  },
+  {
+    "studentId": "L155",
+    "classNo": "1",
+    "subject": "DSA",
+    "comment": "There seems to be a discrepancy between my answers and marks awarded."
+  },
+  {
+    "studentId": "L228",
+    "classNo": "1",
+    "subject": "DSA",
+    "comment": "Requesting more detailed feedback on why certain answers were marked wrong."
+  },
+  {
+    "studentId": "L082",
+    "classNo": "1",
+    "subject": "DSA",
+    "comment": "Missed the class due to an event clash; requesting access to the recording."
+  },
+  {
+    "studentId": "L250",
+    "classNo": "3",
+    "subject": "ProbStats",
+    "comment": "Same time as the Robotics Event"
+  },
+  {
+    "studentId": "L102",
+    "classNo": "5",
+    "subject": "ProbStats",
+    "comment": "Scoring criteria for the recent test was not shared beforehand."
+  },
+  {
+    "studentId": "L171",
+    "classNo": "4",
+    "subject": "ProbStats",
+    "comment": "Issue with the Biometric machine"
+  }
+]
