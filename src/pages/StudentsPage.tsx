@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { CohortSummary, RiskFlag, StudentResult } from "../engine/types";
 import { STUDENTS, GRIEVANCES } from "../lib/data";
 import { Card } from "../components/ui";
@@ -20,6 +20,12 @@ export function StudentsPage({ cohort, selected, onSelect }: { cohort: CohortSum
         .sort((a, b) => b.riskScore - a.riskScore),
     [cohort, batch, flag, search],
   );
+
+  // On load (or once rows are available), default to the first / highest-risk student
+  // so the detail panel is never blank.
+  useEffect(() => {
+    if (!selected && rows.length > 0) onSelect(rows[0]);
+  }, [selected, rows, onSelect]);
 
   const raw = selected ? STUDENTS.find((s) => s.id === selected.id) : null;
   const studentGrievances = selected ? GRIEVANCES.filter((g) => g.studentId === selected.id) : [];
