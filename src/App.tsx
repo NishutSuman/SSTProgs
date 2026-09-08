@@ -7,6 +7,7 @@ import { STUDENTS, GRIEVANCES } from "./lib/data";
 import { Sidebar, type Page } from "./components/Sidebar";
 import { Topbar } from "./components/Topbar";
 import { ConfigModal } from "./components/ConfigModal";
+import { ReportView } from "./components/ReportView";
 import { DashboardPage } from "./pages/DashboardPage";
 import { StudentsPage } from "./pages/StudentsPage";
 import { BatchesPage } from "./pages/BatchesPage";
@@ -32,20 +33,27 @@ export default function App() {
 
   return (
     <div>
-      <Sidebar page={page} onNavigate={setPage} />
-      <div className="ml-60">
-        <Topbar total={cohort.total} onOpenConfig={() => setConfigOpen(true)} />
-        <main className="px-6 py-6">
-          {page === "dashboard" && <DashboardPage cohort={cohort} analytics={analytics} grievanceCount={GRIEVANCES.length} onSelectStudent={openStudent} />}
-          {page === "students" && <StudentsPage cohort={cohort} selected={selected} onSelect={(s) => setSelectedId(s?.id ?? null)} />}
-          {page === "batches" && <BatchesPage analytics={analytics} />}
-          {page === "grievances" && <GrievancesPage cohort={cohort} onSelectStudent={openStudent} />}
-          {page === "trends" && <TrendsPage cohort={cohort} analytics={analytics} />}
-          {page === "riskmodel" && <RiskModelPage config={config} onChange={setConfig} onReset={() => setConfig(DEFAULT_CONFIG)} cohort={cohort} />}
-          {page === "automation" && <AutomationPage cohort={cohort} onSelectStudent={openStudent} />}
-        </main>
+      <div className="no-print">
+        <Sidebar page={page} onNavigate={setPage} />
+        <div className="ml-60">
+          <Topbar total={cohort.total} onOpenConfig={() => setConfigOpen(true)} />
+          <main className="px-6 py-6">
+            {page === "dashboard" && <DashboardPage cohort={cohort} analytics={analytics} grievanceCount={GRIEVANCES.length} onSelectStudent={openStudent} />}
+            {page === "students" && <StudentsPage cohort={cohort} selected={selected} onSelect={(s) => setSelectedId(s?.id ?? null)} />}
+            {page === "batches" && <BatchesPage analytics={analytics} />}
+            {page === "grievances" && <GrievancesPage cohort={cohort} onSelectStudent={openStudent} />}
+            {page === "trends" && <TrendsPage cohort={cohort} analytics={analytics} />}
+            {page === "riskmodel" && <RiskModelPage config={config} onChange={setConfig} onReset={() => setConfig(DEFAULT_CONFIG)} cohort={cohort} />}
+            {page === "automation" && <AutomationPage cohort={cohort} onSelectStudent={openStudent} />}
+          </main>
+        </div>
+        {configOpen && <ConfigModal cohort={cohort} onClose={() => setConfigOpen(false)} />}
       </div>
-      {configOpen && <ConfigModal cohort={cohort} onClose={() => setConfigOpen(false)} />}
+
+      {/* Print-only leadership report */}
+      <div className="report-only">
+        <ReportView cohort={cohort} analytics={analytics} grievanceCount={GRIEVANCES.length} />
+      </div>
     </div>
   );
 }

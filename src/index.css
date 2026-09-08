@@ -32,3 +32,27 @@ input[type="range"] {
   border-radius: 4px;
   background: #1e293b;
 }
+
+/* ---- Print / PDF report ---- */
+.report-only {
+  display: none;
+}
+@page {
+  size: A4;
+  margin: 14mm;
+}
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .report-only {
+    display: block !important;
+  }
+  html,
+  body {
+    background: #ffffff !important;
+  }
+  .break-avoid {
+    break-inside: avoid;
+  }
+}

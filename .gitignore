@@ -14,3 +14,6 @@ service-account.json
 screenshot.png
 shot-*.png
 src/data/prev-reds.json
+
+report.pdf
+report.png
